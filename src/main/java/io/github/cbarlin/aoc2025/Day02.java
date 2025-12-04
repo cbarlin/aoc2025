@@ -5,11 +5,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.logging.Logger;
 
 public final class Day02 {
-    private static final Logger TEST = Logger.getLogger("Day 02 Test");
-    private static final Logger REAL = Logger.getLogger("Day 02 Real");
     private static final String testInput = "day02/test.txt";
     private static final String realInput = "day02/real.txt";
 
@@ -81,15 +78,15 @@ public final class Day02 {
 
     public static void runDay() {
         final Result testResult = sumNumbersWithRepeating(testInput);
+        System.out.println("Day 02 Test part 1: " + testResult.byHalvesSum);
+        System.out.println("Day 02 Test part 2: " + testResult.anyRepeatsSum);
         if (testResult.byHalvesSum != 1227775554L) throw new AssertionError();
         if (testResult.anyRepeatsSum != 4174379265L) throw new AssertionError();
-        TEST.info("Part 1: " + testResult.byHalvesSum);
-        TEST.info("Part 2: " + testResult.anyRepeatsSum);
         final Result realResult = sumNumbersWithRepeating(realInput);
+        System.out.println("Day 02 Real part 1: " + realResult.byHalvesSum);
+        System.out.println("Day 02 Real part 2: " + realResult.anyRepeatsSum);
         if (realResult.byHalvesSum != 31000881061L) throw new AssertionError();
         if (realResult.anyRepeatsSum != 46769308485L) throw new AssertionError();
-        REAL.info("Part 1: " + realResult.byHalvesSum);
-        REAL.info("Part 2: " + realResult.anyRepeatsSum);
     }
 
 

@@ -3,13 +3,10 @@ package io.github.cbarlin.aoc2025;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.logging.Logger;
 import java.util.stream.Gatherers;
 import java.util.stream.Stream;
 
 public final class Day01 {
-    private static final Logger TEST = Logger.getLogger("Day 01 Test");
-    private static final Logger REAL = Logger.getLogger("Day 01 Real");
 
     //#region Input
     private static final String testInput = "day01/test.txt";
@@ -39,14 +36,14 @@ public final class Day01 {
     public static void runDay() {
         try {
             final SafeCodeState testResult = processInput(testInput);
-            TEST.info("Part 1: " + testResult.landedOnZeros);
+            System.out.println("Day 01 Test part 1: " + testResult.landedOnZeros);
+            System.out.println("Day 01 Test part 2: " + testResult.passedZero);
             if (testResult.landedOnZeros != 3) throw new AssertionError();
-            TEST.info("Part 2: " + testResult.passedZero);
             if (testResult.passedZero != 6) throw new AssertionError();
             final SafeCodeState realResult = processInput(realInput);
-            REAL.info("Part 1: " + realResult.landedOnZeros);
+            System.out.println("Day 01 Real part 1: " + realResult.landedOnZeros);
+            System.out.println("Day 01 Real part 2: " + realResult.passedZero);
             if (realResult.landedOnZeros != 1023) throw new AssertionError();
-            REAL.info("Part 2: " + realResult.passedZero);
             if (realResult.passedZero != 5899) throw new AssertionError();
         } catch (Exception e) {
             throw new RuntimeException(e);

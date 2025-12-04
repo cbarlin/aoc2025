@@ -54,13 +54,13 @@ public final class Day03 {
     public static void runDay() {
         try {
             final Result testResult = solveDay(testInput);
-            System.out.println("Test part 1: " + testResult.twoBatteries);
-            System.out.println("Test part 2: " + testResult.twelveBatteries);
+            System.out.println("Day 03 Test part 1: " + testResult.twoBatteries);
+            System.out.println("Day 03 Test part 2: " + testResult.twelveBatteries);
             if (testResult.twoBatteries != 357) throw new AssertionError();
             if (testResult.twelveBatteries != 3121910778619L) throw new AssertionError();
             final Result realResult = solveDay(realInput);
-            System.out.println("Real part 1: " + realResult.twoBatteries);
-            System.out.println("Real part 2: " + realResult.twelveBatteries);
+            System.out.println("Day 03 Real part 1: " + realResult.twoBatteries);
+            System.out.println("Day 03 Real part 2: " + realResult.twelveBatteries);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
