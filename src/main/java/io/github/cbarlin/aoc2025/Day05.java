@@ -10,7 +10,7 @@ import java.util.function.Predicate;
 import java.util.stream.Gatherers;
 import java.util.stream.Stream;
 
-public class Day05 {
+public final class Day05 {
     private static final String testInput = "src/main/resources/day05/test.txt";
     private static final String realInput = "src/main/resources/day05/real.txt";
 

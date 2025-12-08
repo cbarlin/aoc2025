@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
-public class Day06 {
+public final class Day06 {
 
     private static final String testInput = "src/main/resources/day06/test.txt";
     private static final String realInput = "src/main/resources/day06/real.txt";
